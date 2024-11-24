@@ -3,7 +3,7 @@ import './App.css'
 import SearchIcon from './SearchIcon.svg'
 import { useEffect , useState } from 'react'
 import MovieCard from './MovieCard'
-const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=c4006a30';
+const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}`;
 const App = () => {
 const [movies , setMovies] = useState([]);
 const [searchTerm , setSearchTerm] = useState('')
